@@ -1,4 +1,5 @@
-import React from 'react';const Basic = () => {
+import React from 'react';
+const Basic = () => {
   function handleNameChange() {
     const names = ['Html', 'css', 'react', 'js'];
     const int = Math.floor(Math.random() * 4);
