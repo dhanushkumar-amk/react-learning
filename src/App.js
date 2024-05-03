@@ -5,7 +5,7 @@ import Garage from './Components/Garage';
 const App = () => {
   return (
     <div>
-      <Garage />
+      {/* <Garage /> */}
       {/* <Hello /> */}
     </div>
   );
