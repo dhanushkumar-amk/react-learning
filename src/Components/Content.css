@@ -1,1 +1,37 @@
+li {
+  list-style: none;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+input {
+  border: 0;
+  outline: 0;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  /* display: flex; */
+  text-align: center;
+  margin-right: 20px;
+}
 
+label {
+  font-size: 26px;
+}
+
+button {
+  outline: none;
+  border: none;
+  font-size: 21px;
+  margin: 0 20px;
+  color: #f67e1d;
+  background: transparent;
+}
+
+input:checked {
+  background-color: #f67e1d;
+}
+ul {
+  margin-top: 50%;
+}

@@ -1,5 +1,4 @@
-import React, {useState} from 'react';
-import './Content.css';
+import React, {useState} from 'react';import './Content.css';
 import {FaTrashAlt} from 'react-icons/fa';
 
 const Content1 = () => {
@@ -14,6 +13,12 @@ const Content1 = () => {
     const newItems = items.filter((item) => item.id !== id);
     setItems(newItems);
   };
+  const handleCheck = (id) => {
+    const listItem = items.map((item) =>
+      item.id === id ? {...item, checked: !item.checked} : item
+    );
+    setItems(listItem);
+  };
 
   return (
     <main>
@@ -23,11 +28,13 @@ const Content1 = () => {
             <input
               type='checkbox'
               checked={i.checked}
-              onChange={() => {}} // Add change handler if needed
+              onChange={() => {
+                handleCheck(i.id);
+              }} // Add change handler if needed
             />
             <label>{i.item}</label>
             <button
-              className='btn'
+              // className='btn'
               onClick={() => handleDelete(i.id)}>
               <FaTrashAlt
                 role='btn'
