@@ -1,8 +1,14 @@
 import React from 'react';
-const Header = () => {
+const Header = ({title}) => {
   // const headerStyle = {color: 'red'};
 
-  return <header>TODO LIST</header>;
+  return (
+    <header>
+      <h1>{title}</h1>
+    </header>
+  );
 };
-
+Header.defaultProps = {
+  title: 'To-DO List',
+};
 export default Header;

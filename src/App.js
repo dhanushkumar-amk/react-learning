@@ -7,7 +7,12 @@ import Footer from './Components/Footer';
 // import Garage from './Components/Garage';
 import '../src/index.css';
 import Content1 from './Components/Content1';
+import Header5 from './Components/Header5';
+import States from './components1/States';
+import UseState from './components1/UseState';
 // import Content2 from './Content2';
+
+// import cssHeader from './Components/cssHeader';
 
 const App = () => {
   return (
@@ -16,11 +21,18 @@ const App = () => {
       {/* <Hello /> */}
 
       {/* <Basic /> */}
-      <Header />
+      {/* title is a props */}
+
+      {/* <Header /> */}
+      {/* title='Dhanushkumar' */}
 
       {/* <Content1 /> */}
-      <Content1 />
-      <Footer />
+
+      {/* <Header5 /> */}
+      {/* <Content1 /> */}
+      {/* <States /> */}
+      <UseState />
+      {/* <Footer /> */}
     </div>
   );
 };

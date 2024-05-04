@@ -1,5 +1,4 @@
-li {
-  list-style: none;
+li {  list-style: none;
   margin-top: 40px;
   display: flex;
   align-items: center;
@@ -34,4 +33,11 @@ input:checked {
 }
 ul {
   margin-top: 50%;
+}
+
+.p {
+  margin-top: 55%;
+  color: #f67e1d;
+  font-weight: 600;
+  font-size: 24px;
 }
