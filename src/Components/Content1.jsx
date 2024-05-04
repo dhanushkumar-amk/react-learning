@@ -1,7 +1,11 @@
-import React, {useState} from 'react';const Content1 = () => {
+import React, {useState} from 'react';
+import './Content.css';
+import {FaTrashAlt} from 'react-icons/fa';
+
+const Content1 = () => {
   const [items, setItems] = useState([
     {id: 1, checked: true, item: 'Write Coding'},
-    {id: 2, checked: true, item: 'Learn Coding'},
+    {id: 2, checked: false, item: 'Learn Coding'},
     {id: 3, checked: false, item: 'Practice Coding'},
   ]);
 
@@ -22,7 +26,14 @@ import React, {useState} from 'react';const Content1 = () => {
               onChange={() => {}} // Add change handler if needed
             />
             <label>{i.item}</label>
-            <button onClick={() => handleDelete(i.id)}>Delete</button>
+            <button
+              className='btn'
+              onClick={() => handleDelete(i.id)}>
+              <FaTrashAlt
+                role='btn'
+                tabIndex={0}
+              />
+            </button>
           </li>
         ))}
       </ul>
