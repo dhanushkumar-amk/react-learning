@@ -1,31 +1,27 @@
-import React, {useState} from 'react';const Content = () => {
-  // // useState();
-  function handleNameChange() {
-    const names = ['Html', 'css', 'react', 'js'];
-    const int = Math.floor(Math.random() * 4);
-    return names[int];
-  }
-  const handleClick = (e) => {
-    console.log(e.target.innerText);
-  };
+import React, {useState} from 'react';
+const Content = () => {
+  // useState();
+  // function handleNameChange() {
+  //   const names = ['Html', 'css', 'react', 'js'];
+  //   const int = Math.floor(Math.random() * 4);
+  //   return names[int];
+  // }
+  // const handleClick = (e) => {
+  //   console.log(e.target.innerText);
+  // };
 
-  //   passing parameter
+  // passing parameter
 
-  //   it is passing the value automatically
-  //   so we add anonymous function
-  const handleClick2 = () => {
-    console.log('hello');
-  };
-  //   onClick={handleClick2()}
+  // it is passing the value automatically
+  // so we add anonymous function
+  // const handleClick2 = () => {
+  //   console.log('hello');
+  // };
+  // onClick={handleClick2()}
 
-  //   hooks first useState
+  // hooks first useState
 
   const [count, setCount] = useState(1);
-  // const [name, setName] = useState(() => namee());
-
-  function namee() {
-    return console.log('Hello World');
-  }
   // 10 is a default value
   function incrementFunction() {
     setCount(count + 1);
@@ -34,12 +30,11 @@ import React, {useState} from 'react';const Content = () => {
   function decrementFunction() {
     setCount(count - 1);
   }
-
   return (
     <main>
       {/* <p onDoubleClick={handleClick2}> {handleNameChange()}</p>
        */}
-      <p>learn React</p>
+      <p>learn java</p>
       <button
         className='btn' // onClick={(e) => handleClick(e)}
       >

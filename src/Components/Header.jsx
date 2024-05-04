@@ -1,8 +1,7 @@
-import React from 'react';
-const Header = () => {
+import React from 'react';const Header = () => {
   // const headerStyle = {color: 'red'};
 
-  return <header>Hello</header>;
+  return <header>Header</header>;
 };
 
 export default Header;
