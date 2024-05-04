@@ -7,6 +7,7 @@ import Footer from './Components/Footer';
 // import Garage from './Components/Garage';
 import '../src/index.css';
 import Content1 from './Components/Content1';
+// import Content2 from './Content2';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       {/* <Basic /> */}
       <Header />
 
+      {/* <Content1 /> */}
       <Content1 />
       <Footer />
     </div>
