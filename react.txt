@@ -1,0 +1,271 @@
+
+   
+
+
+̥control + alt + r snippet tool for windows
+
+! react 
+
+creating react app 
+npm create-react-app "project_name";
+
+
+
+
+
+In the project directory, you can run:
+`npm start`
+
+
+main components in react
+
+components
+1 functional components
+2 class components
+
+props
+hooks
+
+jsx
+
+component starts with firstLetter Caps 
+rafce
+
+
+
+
+ ? JSX
+Jsx --- > JavaScript Xml
+
+ same as a  Html but some different
+
+ Like className  because class is  keyword so we add className
+
+
+Java Script using html is called Jsx
+
+
+? components
+
+Components a re the important in react
+
+ we can add components inside another components 
+
+ but one condition the component has only one parent element inside the parent element we can add number of child element
+
+  <>
+    for div alternative
+  <>
+
+
+create  a components folder in src folder for putting the all components in separately   for easy access
+
+
+
+
+src -> components  -> your component -> name 
+
+file name is your wish
+
+
+extension => .js or .jsx  
+
+
+rafce command creating the function es6 version
+
+
+
+
+class components
+syntax 
+
+import React from 'react';
+
+class apple extends React.Component {
+
+    render(){ 
+        return(
+            <h2>Class Components</h2>
+        );
+    }
+}
+
+export default apple;
+
+
+ render is function to render the class component to react application
+
+
+
+ ? props
+
+ props = property
+
+property = Data(string, number....)
+
+props is the process of getting the element from one components from other components
+
+
+! for sending the element 
+
+<Hello initialLetter={initial} />
+
+! for getting the element
+
+const Hello = (props) => {
+
+  ? using destructure method 
+  const {initial} = props;  
+
+  const name = `My Name is ${initial} dhanushkumar`;
+
+  return (
+    <div>
+      <h2>{name}</h2>
+      <ClassComponents />
+    </div>
+  );
+};
+
+export default Hello;
+
+
+we can add props directly line age={'26'} 
+
+
+we can add multiple props using
+ object variable
+
+we can error n number of props
+
+
+
+ const {carInfo} = props;
+  const {brand, color, speed} = carInfo;
+
+
+   const car_info = {
+    brand: 'lamborghini',
+    color: 'Black',
+    speed: 450,
+  };
+
+  return 
+    <div>
+      {/* <h1>My Name</h1> */}
+      {/* props  */}
+      {/* <Hello
+        initial={initial}
+        age={'26'}
+      /> */}
+
+      <Hello carInfo={car_info} />
+
+
+
+! conditional rendering
+
+for external purpose because used for condition in the webpage using ternary operator
+condition ? true : false;
+
+
+ <>
+ Semantic tag 
+ </>
+
+
+
+?? inline style in react
+
+
+const headerStyle = {color: 'red'};  => it must be a object
+
+  return <header style={headerStyle}>Hello</header>;
+
+
+?? event handling
+
+famous onClick();
+
+
+react handle is the keyword for handle just understanding
+
+
+import React from 'react';const Content = () => {
+  function handleNameChange() {
+    const names = ['Html', 'css', 'react', 'js'];
+    const int = Math.floor(Math.random() * 4);
+    return names[int];
+  }
+  const handleClick = () => {
+    console.log('hello');
+  };
+
+      passing parameter
+  
+      it is passing the value automatically
+      so we add anonymous function
+  const handleClick2 = () => {
+    console.log('hello');
+  };
+   onClick={handleClick2()}
+
+  return (
+    <main>
+      <p>{handleNameChange()}</p>
+
+      <button
+        className='btn'
+        onClick={() => handleClick2()}>
+        Submit
+      </button>
+    </main>
+  );
+};
+
+export default Content;
+
+
+
+!hooks
+
+? use State
+
+import { useState } from 'react';
+ used for changing their state  for user interaction
+ adding the event to webpage without loading 
+
+
+
+
+
+
+  list and key
+
+  list creating map is necessary  concept map, filter
+
+ ? map 
+ const numbers = [1, 2, 3, 4, 5, 6, 7];
+ const item1 = numbers.map((n) => ({numbers: n}));/
+ console.log(item1);
+
+ ? filter
+ const numbers = [1, 2, 3, 4, 5, 6, 7];
+   const item1 = numbers.filter((n) => n > 3);
+   console.log(item1)
+
+
+
+
+   ?props
+
+  & props Drilling
+
+   to passing the values to the components
+
+   ? use Effect
+
+   for especially use for time management
+   
+   if use effect identifies the that the state of one value is changed then useEffect invokes the useEffect function 
+   
