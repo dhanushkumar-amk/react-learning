@@ -269,3 +269,39 @@ import { useState } from 'react';
    
    if use effect identifies the that the state of one value is changed then useEffect invokes the useEffect function 
    
+
+   ?? React Router 
+   it is used to set url customization
+
+
+
+   http://localhost:8000/
+   http://localhost:8000/about => added about components
+
+
+root url = http://localhost:3000/
+
+then 
+root url = http://localhost:3000/home
+root url = http://localhost:3000/about
+root url = http://localhost:3000/contact
+
+
+! npm i react-router-dom
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+
+
+<BrowserRouter>
+      <Routes>
+        <Route/>
+      </Routes>
+      </BrowserRouter>
+
+
+      <Route
+            path='/'
+            element={<Home />}
+          />
+
+
+          ? router parameter

@@ -1,12 +1,15 @@
 import React from 'react';
+import Home from './ReactRouterConcept/Home';
+import About from './ReactRouterConcept/About';
+import Contact from './ReactRouterConcept/Contact';
 // import Basic from './Components/Basic';
 // import Header from './Components/Header';
 // import Content from './Components/Content';
 // import Footer from './Components/Footer';
 // import Hello from './Components/Hello';
 // import Garage from './Components/Garage';
-import '../src/index.css';
-import ReactForm from './components1/ReactForm';
+// import '../src/index.css';
+// import ReactForm from './components1/ReactForm';
 // import Content1 from './Components/Content1';
 // import Header5 from './Components/Header5';
 // import States from './components1/States';
@@ -17,6 +20,9 @@ import ReactForm from './components1/ReactForm';
 // import Content2 from './Content2';
 
 // import cssHeader from './Components/cssHeader';
+
+import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
+import UserPage from './ReactRouterConcept/UserPage';
 
 const App = () => {
   return (
@@ -41,7 +47,51 @@ const App = () => {
       {/* <UseEffectHook /> */}
       {/* <Footer /> */}
 
-      <ReactForm />
+      {/* <ReactForm /> */}
+
+      {/* ?Router Concept */}
+
+      {/* <Home />
+      <About />
+      <Contact /> */}
+
+      <BrowserRouter>
+        <ul>
+          <li>
+            <Link to='/'>Home</Link>
+          </li>
+          <li>
+            <Link to='/about'>About</Link>
+          </li>
+          <li>
+            <Link to='/contact'>Contact</Link>
+          </li>
+          <li>
+            <Link to='/user/1'>User1</Link>
+          </li>
+          <li>
+            <Link to='/user/6080'>User2</Link>
+          </li>
+        </ul>
+        <Routes>
+          <Route
+            path='/'
+            element={<Home />}
+          />
+          <Route
+            path='/about'
+            element={<About />}
+          />
+          <Route
+            path='/contact'
+            element={<Contact />}
+          />
+          <Route
+            path='/user/:id'
+            element={<UserPage />}
+          />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 };
